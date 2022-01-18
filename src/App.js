@@ -1,34 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-import Escena1 from './components/escena/escena';
+import Escena from './components/escena/escena';
 
+//importar arxiu json que conté les dades
+import Dades from './dades.json';
 
 
 function App() {
+
+  //iterar l'array de les dades
+  const escenes = Dades.map((item) => {
+    return <div>
+      <p>{item}</p>
+    </div>
+  });
+
   return (
     <div className="App">
 
-      <Escena1/>
+    <Escena
+      frase = {escenes[0]}
+      />
 
+    <Escena
+      frase = {escenes[1]}
+      />
 
-{/*
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-      </header>
-*/}
-      
+    <Escena
+      frase = {escenes[2]}
+      />
+
+    <Escena
+      frase = {escenes[3]}
+      />
       
     </div>
   );
