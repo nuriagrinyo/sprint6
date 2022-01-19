@@ -1,10 +1,18 @@
 //importar react
 import React from "react";
 
-export default function Escena(props) {
-    
-    return (
-        <p>{props.frase}</p>
-    )
-        
-}
+import { Box } from "./escena.styled";
+
+export const Escena = (props) => <Box>
+    <p>{props.frase}</p>
+</Box>
+
+
+
+
+
+
+
+
+
+

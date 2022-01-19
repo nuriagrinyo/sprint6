@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import Escena from './components/escena/escena';
+import { Escena } from './components/escena/escena';
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json';
@@ -34,6 +34,8 @@ function App() {
     <Escena
       frase = {escenes[3]}
       />
+
+    
       
     </div>
   );
