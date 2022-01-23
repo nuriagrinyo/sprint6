@@ -1,8 +1,9 @@
 
 import './App.css';
 
+import React, {useState} from 'react';
+
 import { Escena } from './components/escena/escena';
-import { Boto } from './components/boto/boto';
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json';
@@ -17,16 +18,36 @@ function App() {
     </div>
   });
 
+  
+
+  
+  
+
+
+
+  const BotoSeguent = (props) => <button >
+    {props.etiqueta}
+    
+  </button>
+  
+
+
+
+
+
+
+
   return (
     <div className="App">
 
-    <Boto 
-      nom = 'Anterior'
-    />
+      
+      <BotoSeguent 
+        etiqueta = {'Següent'}
+        
+      />
 
-    <Boto 
-      nom = 'Següent'
-    />
+    
+
 
     <Escena
       frase = {escenes[0]}
