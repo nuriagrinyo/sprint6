@@ -2,6 +2,7 @@
 import './App.css';
 
 import { Escena } from './components/escena/escena';
+import { Boto } from './components/boto/boto';
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json';
@@ -18,6 +19,14 @@ function App() {
 
   return (
     <div className="App">
+
+    <Boto 
+      nom = 'Anterior'
+    />
+
+    <Boto 
+      nom = 'Següent'
+    />
 
     <Escena
       frase = {escenes[0]}
