@@ -1,10 +1,12 @@
 import react from "react";
 import { Escena } from "./components/escena/escena";
+import { useRef } from "react";
+
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json';
 
-export function iterarEscenes() {
+export function IterarEscenes() {
 
 //iterar l'array de les dades
 const escenes = Dades.map((item) => {
@@ -14,10 +16,20 @@ const escenes = Dades.map((item) => {
   });
 
 
+
+  
+
+
+  
+
     return <div>
-    <Escena
-      frase = {escenes[0]}
-      />
+
+
+    <Escena 
+    frase = {escenes[0]}
+    
+    
+    />
 
     <Escena
       frase = {escenes[1]}
@@ -30,6 +42,7 @@ const escenes = Dades.map((item) => {
     <Escena
       frase = {escenes[3]}
       />
+
 
 
     </div>
