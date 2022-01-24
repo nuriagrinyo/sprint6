@@ -1,6 +1,7 @@
 //importar react
 import React from "react";
 import styled from "styled-components";
+import { EscenaStyled } from "./escena.styled";
 
 
 
@@ -10,12 +11,7 @@ export const Escena = (props) => <EscenaStyled>
 </EscenaStyled>
 
 
-const EscenaStyled = styled.div`
-    border: 2px solid black;
-    border-radius: 40px;
-    margin: 25px;
-    
-`;
+
 
 
 

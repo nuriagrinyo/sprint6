@@ -4,36 +4,17 @@ import './App.css';
 import React, {useState} from 'react';
 
 import { Escena } from './components/escena/escena';
+import { BotoSeguent, BotoAnterior } from './components/boto/boto';
+import { iterarEscenes } from './escenesGrup';
 
-//importar arxiu json que conté les dades
-import Dades from './dades.json';
+
 
 
 function App() {
 
-  //iterar l'array de les dades
-  const escenes = Dades.map((item) => {
-    return <div>
-      <p>{item}</p>
-    </div>
-  });
-
   
 
   
-  
-
-
-
-  const BotoSeguent = (props) => <button >
-    {props.etiqueta}
-    
-  </button>
-  
-
-
-
-
 
 
 
@@ -41,29 +22,25 @@ function App() {
     <div className="App">
 
       
+      <BotoAnterior 
+      etiqueta = {'Anterior'}
+      />
+
+
       <BotoSeguent 
         etiqueta = {'Següent'}
         
       />
 
+
+
+      {iterarEscenes()}
+
+    
     
 
 
-    <Escena
-      frase = {escenes[0]}
-      />
-
-    <Escena
-      frase = {escenes[1]}
-      />
-
-    <Escena
-      frase = {escenes[2]}
-      />
-
-    <Escena
-      frase = {escenes[3]}
-      />
+    
 
     
       
