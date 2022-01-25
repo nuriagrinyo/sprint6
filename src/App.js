@@ -3,9 +3,9 @@ import './App.css';
 
 import React, {useState} from 'react';
 
-
 import { IterarEscenes } from './escenesGrup';
-import { BotonsCanviarDeColor } from './components/boto/boto';
+import Botons from './components/boto/botons';
+
 
 
 
@@ -13,30 +13,16 @@ import { BotonsCanviarDeColor } from './components/boto/boto';
 function App() {
 
   
-
-  
-
-
-
   return (
+
     <div className="App">
 
-      
-      
-      
 
+      <Botons />
+     
+      <IterarEscenes />
 
-
-      {IterarEscenes()}
-
-    
-    
-
-
-    
-
-    
-      
+  
     </div>
   );
 }
