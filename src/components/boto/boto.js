@@ -1,22 +1,46 @@
-import React from "react";
-import styled from "styled-components";
-import { EscenaStyled } from "../escena/escena.styled";
-
-
-const dirhola = () => console.log('hola');
+import React, { useState } from "react";
 
 
 
 
+const dirhola = () => {
+    console.log('hola');
+}
 
 
-export const BotoSeguent = (props) => <button onClick={dirhola}>
-    {props.etiqueta}
+function BotonsCanviarDeColor() {
+
     
-  </button>
+
+    return <div>
 
 
-export const BotoAnterior = (props) => <button>
-    {props.etiqueta}
-</button>
+        
+
+
+    </div>
+
+
+    
+
+const BotoSeguent = (props) => <button onClick={dirhola}>
+
+    {props.nom}
+
+
+    </button>
+
+    const BotoAnterior = (props) => <button onClick={canviarColor}>
+
+    {props.nom}
+
+    
+    </button>
+
+
+
+
+    
+}
+
 

@@ -1,20 +1,15 @@
 //importar react
 import React from "react";
-
 import { EscenaStyled } from "./escena.styled";
 
 
 
 
+    export const Escena = (props) => <div>
 
-
-
-export const Escena = (props) => <div>
-
+    <EscenaStyled
     
-    
-
-    <EscenaStyled color
+    color={true}
     >
 
     {props.frase}
@@ -22,11 +17,16 @@ export const Escena = (props) => <div>
 
     </EscenaStyled>
     
+    </div>
+
+
+
+
+
+
+
+
     
-</div>
-
-
-
 
 
 

@@ -4,8 +4,8 @@ import './App.css';
 import React, {useState} from 'react';
 
 
-import { BotoSeguent, BotoAnterior } from './components/boto/boto';
 import { IterarEscenes } from './escenesGrup';
+import { BotonsCanviarDeColor } from './components/boto/boto';
 
 
 
@@ -22,15 +22,8 @@ function App() {
     <div className="App">
 
       
-      <BotoAnterior 
-      etiqueta = {'Anterior'}
-      />
-
-
-      <BotoSeguent 
-        etiqueta = {'Següent'}
-        
-      />
+      
+      
 
 
 

@@ -1,10 +1,12 @@
-import react from "react";
+import React from "react";
 import { Escena } from "./components/escena/escena";
-import { useRef } from "react";
 
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json';
+
+
+
 
 export function IterarEscenes() {
 
@@ -17,10 +19,7 @@ const escenes = Dades.map((item) => {
 
 
 
-  
 
-
-  
 
     return <div>
 
@@ -28,7 +27,7 @@ const escenes = Dades.map((item) => {
     <Escena 
     frase = {escenes[0]}
     
-    
+
     />
 
     <Escena
@@ -42,7 +41,6 @@ const escenes = Dades.map((item) => {
     <Escena
       frase = {escenes[3]}
       />
-
 
 
     </div>
