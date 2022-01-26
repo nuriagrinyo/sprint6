@@ -6,6 +6,7 @@ export const EscenaStyled = styled.div`
     border-radius: 40px;
     margin: 25px;
     background-color: ${({ fons }) => fons ? 'red' : 'white'};
+    
 `;
 
 
