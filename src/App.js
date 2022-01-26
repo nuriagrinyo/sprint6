@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 import Escena from './components/escena/escena';
 import { EscenaStyled, StyledButton } from './components/escena/escena.styled';
@@ -25,17 +25,35 @@ function App() {
 
 
   //estat pintat de color vermell
-  const [vermell, setVermell] = useState(false);
 
-  const canviarVermell = () => {
-    setVermell(true);
+  const [blanc, setBlanc] = useState(false);
+
+  const [vermell, setVermell] = useState(true);
+
+  
+
+  /*
+  function canviarColorSeguent() {
+    setVermell(prevState => !prevState)
+    setBlanc(prevState => !prevState )
+    
+  }*/
+
+  const Escena1 = useRef();
+
+  function canviarColorSeguent() {
+    if (Escena1 == blanc){
+      setVermell(prevState => !prevState)
+
+    } else if (blanc){
+      setBlanc(prevState => !prevState)
+    }
+    
   }
 
+  
 
-  const [blanc, setBlanc] = useState (true);
-  const canviarBlanc = () => {
-    setBlanc(false);
-  }
+
 
 
 
@@ -45,33 +63,42 @@ function App() {
     <div className="App">
 
 
-      <StyledButton onClick={canviarVermell}> Anterior </StyledButton>
+      <StyledButton > Anterior </StyledButton>
 
-      <StyledButton onClick={canviarBlanc}> Següent </StyledButton>
+      <StyledButton onClick={canviarColorSeguent}> Següent </StyledButton>
             
 
             
-      <Escena
+      <Escena ref={Escena1}
         frase = {escenes[0]}
-        color = {vermell}
+        color = {blanc}
+        
+
+        
      
       />
 
       <Escena
         frase = {escenes[1]}
-        color = {vermell}
+        color = {blanc}
+        
+        
+        
       
       />
 
       <Escena
         frase = {escenes[2]}
-        color = {vermell}
+        color = {blanc}
+        
+        
       
       />
 
       <Escena
         frase = {escenes[3]}
-        color = {vermell}
+        color = {blanc}
+        
       
       />
 
