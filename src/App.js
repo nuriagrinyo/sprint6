@@ -4,11 +4,10 @@ import './App.css';
 import React, {useState} from 'react';
 
 import Escena from './components/escena/escena';
+import { EscenaStyled, StyledButton } from './components/escena/escena.styled';
 
 //importar arxiu json que conté les dades
 import Dades from './dades.json'
-
-
 
 
 
@@ -25,11 +24,18 @@ function App() {
   });
 
 
+  //estat pintat de color vermell
   const [vermell, setVermell] = useState(false);
 
-  const canviarColor = () => {
+  const canviarVermell = () => {
     setVermell(true);
-}
+  }
+
+
+  const [blanc, setBlanc] = useState (true);
+  const canviarBlanc = () => {
+    setBlanc(false);
+  }
 
 
 
@@ -39,29 +45,35 @@ function App() {
     <div className="App">
 
 
-    <button onClick={canviarColor}>Anterior</button>
+      <StyledButton onClick={canviarVermell}> Anterior </StyledButton>
 
-    <button onClick={canviarColor}>Següent</button>
+      <StyledButton onClick={canviarBlanc}> Següent </StyledButton>
+            
 
+            
+      <Escena
+        frase = {escenes[0]}
+        color = {vermell}
+     
+      />
 
+      <Escena
+        frase = {escenes[1]}
+        color = {vermell}
+      
+      />
 
+      <Escena
+        frase = {escenes[2]}
+        color = {vermell}
+      
+      />
 
-    <Escena 
-      frase = {escenes[0]}
-      vermell={vermell}
-    />
-
-    <Escena
-      frase = {escenes[1]}
-    />
-
-    <Escena
-      frase = {escenes[2]}
-    />
-
-    <Escena
-      frase = {escenes[3]}
-    />
+      <Escena
+        frase = {escenes[3]}
+        color = {vermell}
+      
+      />
 
 
       

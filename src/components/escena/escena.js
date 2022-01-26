@@ -3,37 +3,29 @@ import React from "react";
 import { EscenaStyled } from "./escena.styled";
 
 
-
-
 export default function Escena(props) {
 
+    
+
     return (
-
-
-
+        
         <div>
 
-            
+                {props.color}
 
-                <EscenaStyled 
+            <EscenaStyled  fons = {props.color} >
 
-                fons={true}
                 
-                
-                >
+                {props.frase}
 
-                    {props.vermell}
-
-                    {props.frase}
-
-                </EscenaStyled> 
-
+            </EscenaStyled>
 
         </div>
 
     )
 
 }
+
 
 
 
